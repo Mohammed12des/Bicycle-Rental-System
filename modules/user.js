@@ -1,6 +1,21 @@
 const mongoose = require('mongoose');
-
-
+const bikeSchema = mongoose.Schema({
+    company: {
+        type: String,
+        enum: ['Track ', 'Trinx', 'klyes']
+      },
+      type: {
+        type: String,
+        enum: ['Road ', 'Mountain', 'Hybrid','Touring','Gravel','Cruiser']
+      },
+      color:String,
+  });
+  const bookingSchema = mongoose.Schema({
+    fristdate: Date,
+    lastdate:Date,
+    bike:[bikeSchema],
+  });
+  
 const userSchema = mongoose.Schema({
     username: {
       type: String,
@@ -14,25 +29,12 @@ const userSchema = mongoose.Schema({
         type: Number,
         required: true,
       },
+      email:{type:String},
       booking:[bookingSchema],
       bike: [bikeSchema]
   });
-  const bookingSchema = mongoose.Schema({
-    fristdate: Date,
-    lastdate:Date,
-    bike:[bikeSchema],
-  });
-  const bikeSchema = mongoose.Schema({
-    company: {
-        type: String,
-        enum: ['Track ', 'Trinx', 'klyes']
-      },
-      type: {
-        type: String,
-        enum: ['Road ', 'Mountain', 'Hybrid','Touring','Gravel','Cruiser']
-      },
-      color:String,
-  });
+
+  
   
 
   
