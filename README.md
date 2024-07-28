@@ -40,3 +40,6 @@ So that I can easily find and reserve a bike for my needs.
 * New Rental Page
 ![new](https://i.ibb.co/DrtbxW8/Screenshot-2024-07-27-222554.png") 
 
+# ERD
+
+![ERD](https://i.ibb.co/1qgYQtF/erd.png) 
