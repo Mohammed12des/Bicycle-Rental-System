@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.10.0"
+  },
+  "name": "bicycle-rental-system",
+  "version": "1.0.0",
+  "description": "![Bicycle-Rental-System](https://static.vecteezy.com/system/resources/previews/035/861/476/non_2x/city-bicycle-sharing-system-isolated-on-white-bike-stand-with-rental-bicycles-bike-on-docking-station-and-smartphone-urban-transportation-smart-service-cartoon-flat-illustration-vector.jpg)  # Project Overview The bike rental system is designed to provide an easy-to-use and efficient bike rental platform. The system will serve different stakeholders including individual users, fleet managers, and administrative staff. It aims to facilitate smooth bike rental and return operations, manage fleet operations, and provide insightful analytics.",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev":"node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
