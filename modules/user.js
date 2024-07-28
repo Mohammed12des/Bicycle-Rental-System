@@ -1,19 +1,6 @@
 const mongoose = require('mongoose');
 
-const RentalSchema = new mongoose.Schema({
-  name: String,
-  adders: String,
-  fristdate: Date,
-  lastdate:Date,
-  company: {
-    type: String,
-    enum: ['Track ', 'Trinx', 'klyes']
-  },
-  type: {
-    type: String,
-    enum: ['Road ', 'Mountain', 'Hybrid','Touring','Gravel','Cruiser']
-  }
-})
+
 const userSchema = mongoose.Schema({
     username: {
       type: String,
@@ -23,8 +10,31 @@ const userSchema = mongoose.Schema({
       type: String,
       required: true,
     },
-    Rental: [RentalSchema]
+    phone: {
+        type: Number,
+        required: true,
+      },
+      booking:[bookingSchema],
+      bike: [bikeSchema]
   });
+  const bookingSchema = mongoose.Schema({
+    fristdate: Date,
+    lastdate:Date,
+    bike:[bikeSchema],
+  });
+  const bikeSchema = mongoose.Schema({
+    company: {
+        type: String,
+        enum: ['Track ', 'Trinx', 'klyes']
+      },
+      type: {
+        type: String,
+        enum: ['Road ', 'Mountain', 'Hybrid','Touring','Gravel','Cruiser']
+      },
+      color:String,
+  });
+  
+
   
   const User = mongoose.model('User', userSchema);
   

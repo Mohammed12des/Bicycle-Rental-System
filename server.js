@@ -9,7 +9,16 @@ const session = require('express-session');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-app.use();
+app.use( session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  }));
+
+
+  app.get('/', (req, res) => {
+      res.render('home.ejs')
+  });
 
 
 
