@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on('connected', () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
+
 //Middelwaer
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
@@ -33,8 +34,6 @@ app.use(
   );
   app.use(passUserToView)
 
-  
-
   app.get('/', (req, res) => {
     if (req.session.user) {
         res.redirect(`/users/${req.session.user._id}/rental`)
@@ -45,10 +44,6 @@ app.use(
   });
   app.use('/auth', auth);
   app.use(isSignedIn)
-
- 
-
-
 
   app.use('/users/:userId/rental', RentalCtrl)
 

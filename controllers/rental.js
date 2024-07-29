@@ -21,7 +21,8 @@ router.get('/', async (req, res) => {
   router.post('/', async (req, res) => {
     try {
       const currentUser = await User.findById(req.session.user._id)
-      req.body.sdate = new Date(req.body.sdate)
+      currentUser.booking.push(req.body)
+      console.log(req.body)
       currentUser.bike.push(req.body)
       await currentUser.save()
       res.redirect(`/users/${currentUser._id}/rental`)
