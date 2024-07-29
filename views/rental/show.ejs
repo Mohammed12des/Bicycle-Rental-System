@@ -6,7 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <%- include('./partials/nav.ejs') %>
-     
+    <%- include('../partials/nav.ejs') %>
+    <h1><%= bike.company %> at <%= bike.adress %></h1>
+    
+
+
+    <a href="/users/<%= user._id %>/rental/<%= rental._id %>/edit">Edit this application</a>
+
+    <form
+      action="/users/<%= user._id %>/rental/<%= rental._id %>?_method=DELETE"
+      method="post">
+      <button type="submit">Delete this Rental</button>
 </body>
 </html>
