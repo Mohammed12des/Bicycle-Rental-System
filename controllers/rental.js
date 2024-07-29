@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
     res.render("rental/index.ejs", {
-      rental: currentUser.rental,
+      bookings: currentUser.booking,
     });
   } catch (error) {
     console.log(error);
