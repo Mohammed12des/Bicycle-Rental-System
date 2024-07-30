@@ -7,6 +7,13 @@ router.get("/", async (req, res) => {
     const currentUser = await User.findById(req.session.user._id);
     res.render("rental/index.ejs", {
       bookings: currentUser.booking,
+      imges: {
+        Track: "https://gearjunkie.com/legacy/images/9531.jpg",
+        Trinx:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSisJllnhY55iy6blLnDC3iMxQ7XCQBkqwNIA&s",
+        klyes:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT366qhoEO_hVdQhYAvU86RMGUwbKf13t-c_Q&s",
+      },
     });
   } catch (error) {
     console.log(error);
@@ -102,24 +109,23 @@ router.get("/:bookingId/edit", async (req, res) => {
     res.redirect("/");
   }
 });
-// // router.put("/:bookingId", async (req, res) => {
-// //   try {
-// //     const currentUser = await User.findById(req.session.user._id);
-// //     const booking = currentUser.booking.id(req.params.bookingId);
 
-// //     booking.set(req.body);
-// //     await currentUser.save();
-// //     res.redirect(`/users/${currentUser._id}/rental/${req.params.bookingId}`);
-// //   } catch (error) {
-// //     console.log(error);
-// //     res.redirect("/");
-// //   }
-// });
-
-router.post("/:bookingId", async (req, res) => {
+router.put("/:bookingId", async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
+
     const booking = currentUser.booking.id(req.params.bookingId);
+
+    const sdate = new Date(req.body.sdate);
+    const edate = new Date(req.body.edate);
+    const currentDate = new Date();
+
+    if (sdate < currentDate) {
+      return res.send("Start date cannot be before today.");
+    }
+    if (edate < sdate) {
+      return res.send("End date cannot be before the start date.");
+    }
 
     const newBike = {
       company: req.body.company,
@@ -127,28 +133,17 @@ router.post("/:bookingId", async (req, res) => {
       color: req.body.color,
     };
 
-    const newBooking = {
-      adders: req.body.adders,
-      fristdate: req.body.sdate,
-      lastdate: req.body.edate,
-      bike: [newBike],
-    };
-    const currentDate = new Date();
+    booking.adders = req.body.adders;
+    booking.fristdate = req.body.sdate;
+    booking.lastdate = req.body.edate;
+    booking.bike[0] = newBike;
 
-    if (req.body.sdate < currentDate.toISOString().split("T")[0]) {
-      return res.send("Start date cannot be before today.");
-    }
-    if (req.body.edate < req.body.sdate) {
-      return res.send("End date cannot be before the start date.");
-    }
-    console.log(req.body);
-    // currentUser.booking.push(newBooking);
-    booking = newBooking;
     await currentUser.save();
+
     res.redirect(`/users/${currentUser._id}/rental/${req.params.bookingId}`);
   } catch (error) {
-    console.log(error);
-    res.redirect("/");
+    console.error("Error updating booking:", error);
+    res.redirect("/error");
   }
 });
 

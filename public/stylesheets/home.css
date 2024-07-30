@@ -30,12 +30,7 @@ header.hero {
 .hero-content {
   text-align: center;
   padding: 20px;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent background for better text readability */
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
 }
 

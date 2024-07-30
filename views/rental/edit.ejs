@@ -9,11 +9,11 @@
   <body>
     <%- include('../partials/nav.ejs') %>
     <form
-    action="/users/<%= user._id %>/rental/<%= booking._id %>"
+    action="/users/<%= user._id %>/rental/<%= booking._id %>?_method=PUT"
       method="POST"
     >
-      <label for="adress">Address</label>
-      <input type="text" name="address" id="address" value="<%= booking.adders %>" />
+      <label for="adders">Address</label>
+      <input type="text" name="adders" id="adders" value="<%= booking.adders %>" />
 
 
       <label for="sdate">Start Date</label>
