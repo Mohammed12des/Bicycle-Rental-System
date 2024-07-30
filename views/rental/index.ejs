@@ -12,9 +12,14 @@
     <ul>
       <% bookings.forEach( booking => { %>
       <li>
-        <h3><%= booking.adders %> at <%= booking.fristdate %></h3>
-        <p><%= booking.bike[0].type %></p>
+        <h2><%= booking.bike[0].company %> - <%= booking.bike[0].type %></h2>
       </li>
+      <p>Address: <%= booking.adders %></p>
+      <p>Start date: <%= booking.fristdate %></p>
+      <p>End date: <%= booking.lastdate %></p>
+      <a href="/users/<%= user._id %>/rental/<%= booking._id %>">
+        View details</a
+      >
       <% }) %>
     </ul>
   </body>

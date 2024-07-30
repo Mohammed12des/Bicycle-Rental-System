@@ -45,15 +45,54 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/:rentalId", async (req, res) => {
+router.get("/:bookingId", async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
+    const booking = currentUser.booking.id(req.params.bookingId);
     res.render("rental/show.ejs", {
-      rentals,
+      booking,
     });
   } catch (error) {
     console.log(error);
     res.redirect("/");
   }
 });
+
+router.delete("/:bookingId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    currentUser.booking.id(req.params.bookingId).deleteOne();
+    await currentUser.save();
+    res.redirect(`/users/${currentUser._id}/rental`);
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
+router.get("/:bookingId/edit", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const booking = currentUser.booking.id(req.params.bookingId);
+    res.render("rental/edit.ejs", {
+      booking,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+router.put("/:bookingId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const booking = currentUser.booking.id(req.params.bookingId);
+    booking.set(req.body);
+    await currentUser.save();
+    res.redirect(`/users/${currentUser._id}/rental/${req.params.bookingId}`);
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
 module.exports = router;

@@ -7,5 +7,59 @@
   </head>
   <body>
     <%- include('../partials/nav.ejs') %>
+    <form
+      action="/users/<%= user._id %>/rental/<%= booking._id %>?_method=PUT"
+      method="POST"
+    >
+      <label for="adress">Address</label>
+      <input
+        type="text"
+        name="adress"
+        id="adress"
+        value="<%= booking.adders %>"
+      />
+
+      <label for="sdate">Start Date</label>
+      <input
+        type="date"
+        name="sdate"
+        id="sdate"
+        value="<%= booking.fristdate %>"
+      />
+
+      <label for="edate">End Date</label>
+      <input
+        type="date"
+        name="edate"
+        id="edate"
+        value="<%= booking.lastdate %>"
+      />
+
+      <label for="company">Company:</label>
+      <select name="company" id="company">
+        <option value="Track" <%= booking.bike[0].company === "Track" ? "selected" : "" %>>Track</option>
+        <option value="Trinx" <%= booking.bike[0].company === "Trinx" ? "selected" : "" %>>Trinx</option>
+        <option value="klyes" <%= booking.bike[0].company === "klyes" ? "selected" : "" %>>klyes</option>
+      </select>
+
+      <label for="type">Type:</label>
+      <select name="type" id="type">
+        <option value="Road" <%= booking.bike[0].type === "Road" ? "selected" : "" %>>Road</option>
+        <option value="Mountain" <%= booking.bike[0].type === "Mountain" ? "selected" : "" %>>Mountain</option>
+        <option value="Hybrid" <%= booking.bike[0].type === "Hybrid" ? "selected" : "" %>>Hybrid</option>
+        <option value="Touring" <%= booking.bike[0].type === "Touring" ? "selected" : "" %>>Touring</option>
+        <option value="Gravel" <%= booking.bike[0].type === "Gravel" ? "selected" : "" %>>Gravel</option>
+        <option value="Cruiser" <%= booking.bike[0].type === "Cruiser" ? "selected" : "" %>>Cruiser</option>
+      </select>
+
+      <label for="color">Colour</label>
+      <input
+        type="text"
+        name="color"
+        id="color"
+        value="<%= booking.bike[0].color %>"
+      />
+      <button type="submit">Update Rental</button>
+    </form>
   </body>
 </html>
