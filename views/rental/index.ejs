@@ -15,8 +15,8 @@
         <h2><%= booking.bike[0].company %> - <%= booking.bike[0].type %></h2>
       </li>
       <p>Address: <%= booking.adders %></p>
-      <p>Start date: <%= booking.fristdate %></p>
-      <p>End date: <%= booking.lastdate %></p>
+      <p>Start date: <%= booking.fristdate.toISOString().split('T')[0] %></p>
+      <p>End date: <%= booking.lastdate.toISOString().split('T')[0] %></p>
       <a href="/users/<%= user._id %>/rental/<%= booking._id %>">
         View details</a
       >
