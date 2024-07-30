@@ -1,0 +1,140 @@
+/* Reset some basic elements */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+header.hero {
+  position: relative;
+  background: url("/images/bike-background.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 20px;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better text readability */
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}
+
+/* Info Section */
+section.info {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section.info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+section.info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header.hero {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  section.info h2 {
+    font-size: 1.5rem;
+  }
+
+  section.info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header.hero {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  section.info h2 {
+    font-size: 1.2rem;
+  }
+
+  section.info p {
+    font-size: 0.9rem;
+  }
+}
+
+header.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better text readability */
+  border-radius: 8px;
+}

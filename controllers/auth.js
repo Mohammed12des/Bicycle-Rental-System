@@ -20,6 +20,7 @@ router.get("/sign-out", (req, res) => {
 router.post("/sign-up", async (req, res) => {
   try {
     // Check if the username is already taken
+
     const userInDatabase = await User.findOne({ username: req.body.username });
     if (userInDatabase) {
       return res.send("Username already taken.");
@@ -36,7 +37,13 @@ router.post("/sign-up", async (req, res) => {
     req.body.password = hashedPassword;
 
     // All ready to create the new user!
-    await User.create(req.body);
+
+    await User.create({
+      username: req.body.username,
+      password: req.body.password,
+      phone: Number(req.body.phone),
+      email: req.body.email,
+    });
 
     res.redirect("/auth/sign-in");
   } catch (error) {

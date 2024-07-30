@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
 const express = require("express");
+const path = require("path"); // Add this line
 const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
@@ -19,7 +20,7 @@ mongoose.connection.on("connected", () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
-//Middelwaer
+// Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(
@@ -30,7 +31,7 @@ app.use(
   })
 );
 app.use(passUserToView);
-
+app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   if (req.session.user) {
     res.redirect(`/users/${req.session.user._id}/rental`);
@@ -43,6 +44,6 @@ app.use(isSignedIn);
 
 app.use("/users/:userId/rental", RentalCtrl);
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });

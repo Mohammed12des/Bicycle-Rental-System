@@ -1,13 +1,17 @@
-<nav>
-  <% if (user) { %>
-
-  <a href="/users/<%= user._id %>/rental">chosse your Rental</a>
-  <a href="/auth/sign-out">Sign Out</a>
-
-  <% } else { %>
-
-  <a href="/auth/sign-in">Sign In</a>
-  <a href="/auth/sign-up">Sign Up</a>
-
-  <% } %>
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-menu">
+      <% if (user) { %>
+      <a href="/users/<%= user._id %>/rental" class="navbar-item"
+        >Your Rental</a
+      >
+      <a href="/auth/sign-out" class="navbar-item navbar-item-signout"
+        >Sign Out</a
+      >
+      <% } else { %>
+      <a href="/auth/sign-in" class="navbar-item">Sign In</a>
+      <a href="/auth/sign-up" class="navbar-item">Sign Up</a>
+      <% } %>
+    </div>
+  </div>
 </nav>

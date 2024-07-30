@@ -35,6 +35,7 @@ const userSchema = mongoose.Schema({
   },
   phone: {
     type: Number,
+    required: true,
   },
   email: { type: String },
   booking: [bookingSchema],

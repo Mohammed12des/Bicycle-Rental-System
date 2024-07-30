@@ -4,24 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Document</title>
+    <title>Your Rental Bike</title>
   </head>
   <body>
     <%- include('../partials/nav.ejs') %>
-    <h1>Your Rental Bike</h1>
-    <a href="/users/<%= user._id %>/rental/new">Rental new Bike</a>
-    <ul>
-      <% bookings.forEach( booking => { %>
-      <li>
-        <h2><%= booking.bike[0].company %> - <%= booking.bike[0].type %></h2>
-      </li>
-      <p>Address: <%= booking.adders %></p>
-      <p>Start date: <%= booking.fristdate.toISOString().split('T')[0] %></p>
-      <p>End date: <%= booking.lastdate.toISOString().split('T')[0] %></p>
-      <a href="/users/<%= user._id %>/rental/<%= booking._id %>">
-        View details</a
+    <main>
+      <h1>Your Rental Bike</h1>
+      <a href="/users/<%= user._id %>/rental/new" class="btn"
+        >Rental New Bike</a
       >
-      <% }) %>
-    </ul>
+      <ul class="booking-list">
+        <% bookings.forEach(booking => { %>
+        <li class="booking-item">
+          <h2><%= booking.bike[0].company %> - <%= booking.bike[0].type %></h2>
+          <p><strong>Address:</strong> <%= booking.adders %></p>
+          <p>
+            <strong>Start Date:</strong> <%=
+            booking.fristdate.toISOString().split('T')[0] %>
+          </p>
+          <p>
+            <strong>End Date:</strong> <%=
+            booking.lastdate.toISOString().split('T')[0] %>
+          </p>
+          <a href="/users/<%= user._id %>/rental/<%= booking._id %>" class="btn"
+            >View Details</a
+          >
+        </li>
+        <% }) %>
+      </ul>
+    </main>
   </body>
 </html>

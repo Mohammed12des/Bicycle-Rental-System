@@ -4,28 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Document</title>
+    <title>Booking Details</title>
   </head>
   <body>
     <%- include('../partials/nav.ejs') %>
 
-    <h1>
-      Company : <%=booking.bike[0].company%> - Type: <%= booking.bike[0].type %>
-    </h1>
-    <h2>Colour: <%= booking.bike[0].color %></h2>
-    <h2>Adress: <%= booking.adders %></h2>
-    <h3>Start date : <%= booking.fristdate.toISOString().split('T')[0] %></h3>
-    <h3>End date : <%= booking.lastdate.toISOString().split('T')[0] %></h3>
+    <main class="booking-details">
+      <h1>
+        Company: <%= booking.bike[0].company %> - Type: <%= booking.bike[0].type
+        %>
+      </h1>
+      <h2>Colour: <%= booking.bike[0].color %></h2>
+      <h2>Address: <%= booking.adders %></h2>
+      <h3>Start Date: <%= booking.fristdate.toISOString().split('T')[0] %></h3>
+      <h3>End Date: <%= booking.lastdate.toISOString().split('T')[0] %></h3>
 
-    <a href="/users/<%= user._id %>/rental/<%= booking._id %>/edit"
-      >Edit this application</a
-    >
+      <div class="buttons">
+        <a
+          href="/users/<%= user._id %>/rental/<%= booking._id %>/edit"
+          class="btn"
+          >Edit this Application</a
+        >
 
-    <form
-      action="/users/<%= user._id %>/rental/<%= booking._id %>?_method=DELETE"
-      method="post"
-    >
-      <button type="submit">Delete this Rental</button>
-    </form>
+        <form
+          action="/users/<%= user._id %>/rental/<%= booking._id %>?_method=DELETE"
+          method="post"
+        >
+          <button type="submit" class="btn btn-delete">
+            Delete this Rental
+          </button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
