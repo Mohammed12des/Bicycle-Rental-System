@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/new.css" />
     <title>Bike Rental Form</title>
   </head>
   <body>
     <%- include('../partials/nav.ejs') %>
 
-    <main>
+    <main class="rental-form-container">
       <h1>Rent a Bike</h1>
-      <form action="/users/<%= user._id %>/rental" method="POST">
+      <form
+        action="/users/<%= user._id %>/rental"
+        method="POST"
+        class="rental-form"
+      >
         <div class="form-group">
           <label for="adders">Address</label>
           <input type="text" name="adders" id="adders" required />
@@ -53,7 +57,13 @@
           <input type="text" name="color" id="color" required />
         </div>
 
-        <button type="submit">Rent Bike</button>
+        <button type="submit" class="submit-btn">Rent Bike</button>
+
+        <% if(startDateError){ %>
+        <div class="error-message">Start Date Error: <%= startDateError %></div>
+        <% } %> <% if(endDateError){ %>
+        <div class="error-message">End Date Error: <%= endDateError %></div>
+        <% } %>
       </form>
     </main>
   </body>

@@ -10,27 +10,38 @@
     <%- include('../partials/nav.ejs') %>
     <main>
       <h1>Your Rental Bike</h1>
-      <a href="/users/<%= user._id %>/rental/new" class="btn"
-        >Rental New Bike</a
+      <a href="/users/<%= user._id %>/rental/new" class="btn primary-btn"
+        >Rent New Bike</a
       >
       <ul class="booking-list">
         <% bookings.forEach(booking => { %>
         <li class="booking-item">
-          <h2><%= booking.bike[0].company %> - <%= booking.bike[0].type %></h2>
-          <p><strong>Address:</strong> <%= booking.adders %></p>
-          <p>
-            <strong>Start Date:</strong> <%=
-            booking.fristdate.toISOString().split('T')[0] %>
-          </p>
-          <p>
-            <strong>End Date:</strong> <%=
-            booking.lastdate.toISOString().split('T')[0] %>
-          </p>
-          <a href="/users/<%= user._id %>/rental/<%= booking._id %>" class="btn"
-            >View Details</a
-          >
+          <div class="bike-image">
+            <img
+              src="<%= imges[booking.bike[0].company] %>"
+              alt="<%= booking.bike[0].company %> Bike Image"
+            />
+          </div>
+          <div class="booking-info">
+            <h2>
+              <%= booking.bike[0].company %> - <%= booking.bike[0].type %>
+            </h2>
+            <p><strong>Address:</strong> <%= booking.adders %></p>
+            <p>
+              <strong>Start Date:</strong> <%=
+              booking.fristdate.toISOString().split('T')[0] %>
+            </p>
+            <p>
+              <strong>End Date:</strong> <%=
+              booking.lastdate.toISOString().split('T')[0] %>
+            </p>
+            <a
+              href="/users/<%= user._id %>/rental/<%= booking._id %>"
+              class="btn secondary-btn"
+              >View Details</a
+            >
+          </div>
         </li>
-        <img src="<%= imges[booking.bike[0].company] %>" />
         <% }) %>
       </ul>
     </main>

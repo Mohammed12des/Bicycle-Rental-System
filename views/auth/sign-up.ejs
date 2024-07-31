@@ -4,35 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
+    <link rel="stylesheet" href="/stylesheets/sign-up.css" />
   </head>
   <body>
     <%- include('../partials/nav.ejs') %>
-    <h1>Create a new account!</h1>
-    <form action="/auth/sign-up" method="POST">
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username" required />
 
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" required />
+    <main class="sign-up-container">
+      <h1>Create a New Account</h1>
+      <form action="/auth/sign-up" method="POST" class="sign-up-form">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required />
 
-      <label for="confirmPassword">Confirm Password:</label>
-      <input
-        type="password"
-        name="confirmPassword"
-        id="confirmPassword"
-        required
-      />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
 
-      <label for="phone">Phone Number:</label>
-      <input type="text" name="phone" id="phone" required />
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          required
+        />
 
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" required />
+        <label for="phone">Phone Number:</label>
+        <input type="text" name="phone" id="phone" required />
 
-      <button type="submit">Sign up</button>
-      <% if (error) { %>
-      <div class="error"><%= error %></div>
-      <% } %>
-    </form>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <button type="submit">Sign Up</button>
+
+        <% if (error) { %>
+        <div class="error"><%= error %></div>
+        <% } %>
+      </form>
+    </main>
   </body>
 </html>

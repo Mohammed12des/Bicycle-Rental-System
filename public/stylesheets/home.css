@@ -8,30 +8,43 @@ p {
   box-sizing: border-box;
 }
 
+/* Ensure body takes up full height */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  /* background-color: #f4f4f4; */
 }
 
+/* Hero Section */
 header.hero {
   position: relative;
-  background: url("/images/bike-background.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  color: #fff;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.img-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the whole area */
+  z-index: -1; /* Place video behind the content */
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1; /* Make sure content is on top of the video */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white; /* Text color for contrast */
   text-align: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+  max-width: 800px;
 }
 
 .hero-content h1 {
@@ -41,6 +54,28 @@ header.hero {
 
 .hero-content p {
   font-size: 1.5rem;
+}
+
+/* Button Container */
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }
 
 /* Info Section */
@@ -61,10 +96,6 @@ section.info p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  header.hero {
-    height: 60vh;
-  }
-
   .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -83,10 +114,6 @@ section.info p {
 }
 
 @media (max-width: 480px) {
-  header.hero {
-    height: 50vh;
-  }
-
   .hero-content h1 {
     font-size: 1.8rem;
   }
@@ -102,34 +129,4 @@ section.info p {
   section.info p {
     font-size: 0.9rem;
   }
-}
-
-header.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-header.hero video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 20px;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent background for better text readability */
-  border-radius: 8px;
 }

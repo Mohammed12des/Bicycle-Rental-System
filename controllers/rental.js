@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/new", async (req, res) => {
-  res.render("rental/new.ejs");
+  res.render("rental/new.ejs", { startDateError: false, endDateError: false });
 });
 
 router.post("/", async (req, res) => {
@@ -42,12 +42,18 @@ router.post("/", async (req, res) => {
       bike: [newBike],
     };
     const currentDate = new Date();
-
+    const date = req.body.sdate;
     if (req.body.sdate < currentDate.toISOString().split("T")[0]) {
-      return res.send("Start date cannot be before today.");
+      return res.render("rental/new.ejs", {
+        startDateError: true,
+        endDateError: false,
+      });
     }
     if (req.body.edate < req.body.sdate) {
-      return res.send("End date cannot be before the start date.");
+      return res.render("rental/new.ejs", {
+        startDateError: false,
+        endDateError: true,
+      });
     }
 
     currentUser.booking.push(newBooking);

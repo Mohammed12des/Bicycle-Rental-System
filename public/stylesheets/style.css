@@ -1,20 +1,120 @@
-body {
-  background-color: #f2f2f2;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 8px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Main Section */
+main {
+  padding: 20px;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  text-decoration: none;
   border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #007bff;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.secondary-btn {
+  background-color: #6c757d;
+}
+
+.secondary-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Booking List */
+.booking-list {
+  list-style: none;
+  padding: 0;
+}
+
+.booking-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+/* Image Styles */
+.bike-image {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.bike-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Booking Info Styles */
+.booking-info {
+  flex: 2;
+}
+
+.booking-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.booking-info p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.booking-info a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bike-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .booking-info {
+    text-align: left;
+  }
 }

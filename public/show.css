@@ -1,0 +1,82 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container Styling */
+.booking-details {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.booking-header {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.booking-header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.booking-header h2 {
+  font-size: 20px;
+  color: #555;
+}
+
+/* Booking Info Styling */
+.booking-info {
+  margin-bottom: 20px;
+}
+
+.booking-info p {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Button Styling */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-edit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}

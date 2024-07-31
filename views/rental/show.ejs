@@ -3,28 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title>Booking Details</title>
   </head>
   <body>
     <%- include('../partials/nav.ejs') %>
 
     <main class="booking-details">
-      <h1>
-        Company: <%= booking.bike[0].company %> - Type: <%= booking.bike[0].type
-        %>
-      </h1>
-      <h2>Colour: <%= booking.bike[0].color %></h2>
-      <h2>Address: <%= booking.adders %></h2>
-      <h3>Start Date: <%= booking.fristdate.toISOString().split('T')[0] %></h3>
-      <h3>End Date: <%= booking.lastdate.toISOString().split('T')[0] %></h3>
+      <div class="booking-header">
+        <h1>
+          Company: <%= booking.bike[0].company %> - Type: <%=
+          booking.bike[0].type %>
+        </h1>
+        <h2>Colour: <%= booking.bike[0].color %></h2>
+      </div>
+
+      <div class="booking-info">
+        <p><strong>Address:</strong> <%= booking.adders %></p>
+        <p>
+          <strong>Start Date:</strong> <%=
+          booking.fristdate.toISOString().split('T')[0] %>
+        </p>
+        <p>
+          <strong>End Date:</strong> <%=
+          booking.lastdate.toISOString().split('T')[0] %>
+        </p>
+      </div>
 
       <div class="buttons">
         <a
           href="/users/<%= user._id %>/rental/<%= booking._id %>/edit"
-          class="btn"
-          >Edit this Application</a
+          class="btn btn-edit"
         >
+          Edit this Application
+        </a>
 
         <form
           action="/users/<%= user._id %>/rental/<%= booking._id %>?_method=DELETE"
