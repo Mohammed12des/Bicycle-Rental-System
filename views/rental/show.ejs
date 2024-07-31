@@ -19,15 +19,25 @@
       </div>
 
       <div class="booking-info">
-        <p><strong>Address:</strong> <%= booking.adders %></p>
-        <p>
-          <strong>Start Date:</strong> <%=
-          booking.fristdate.toISOString().split('T')[0] %>
-        </p>
-        <p>
-          <strong>End Date:</strong> <%=
-          booking.lastdate.toISOString().split('T')[0] %>
-        </p>
+        <div class="info-container">
+          <div class="info-text">
+            <p><strong>Address:</strong> <%= booking.adders %></p>
+            <p>
+              <strong>Start Date:</strong> <%=
+              booking.fristdate.toISOString().split('T')[0] %>
+            </p>
+            <p>
+              <strong>End Date:</strong> <%=
+              booking.lastdate.toISOString().split('T')[0] %>
+            </p>
+          </div>
+          <div class="bike-image">
+            <img
+              src="<%= imges[booking.bike[0].type] %>"
+              alt="<%= booking.bike[0].type %> Bike Image"
+            />
+          </div>
+        </div>
       </div>
 
       <div class="buttons">

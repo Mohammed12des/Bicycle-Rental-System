@@ -11,44 +11,40 @@ body {
   color: #333;
 }
 
-/* Main Section */
-main {
-  padding: 20px;
+/* Main Content */
+.main-content {
+  padding: 10px;
 }
 
-/* Heading */
-h1 {
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.pexels.com/photos/11304394/pexels-photo-11304394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+      no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px;
+  border-radius: 8px;
   margin-bottom: 20px;
-  font-size: 2rem;
-  color: #333;
 }
 
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px 0;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 25px;
   text-decoration: none;
   border-radius: 5px;
-  color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: background-color 0.3s ease;
 }
 
-.primary-btn {
-  background-color: #007bff;
-}
-
-.primary-btn:hover {
+.hero .btn:hover {
   background-color: #0056b3;
-}
-
-.secondary-btn {
-  background-color: #6c757d;
-}
-
-.secondary-btn:hover {
-  background-color: #5a6268;
 }
 
 /* Booking List */
@@ -100,6 +96,16 @@ h1 {
 .booking-info a {
   display: inline-block;
   margin-top: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #6c757d;
+  transition: background-color 0.3s ease;
+}
+
+.booking-info a:hover {
+  background-color: #5a6268;
 }
 
 /* Responsive Design */

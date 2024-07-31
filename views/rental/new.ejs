@@ -60,9 +60,13 @@
         <button type="submit" class="submit-btn">Rent Bike</button>
 
         <% if(startDateError){ %>
-        <div class="error-message">Start Date Error:</div>
+        <div class="error-message">
+          Start Date Error: Start date should be Today or above
+        </div>
         <% } %> <% if(endDateError){ %>
-        <div class="error-message">End Date Error:</div>
+        <div class="error-message">
+          End Date Error:End Date should be grater than the Start Date
+        </div>
         <% } %>
       </form>
     </main>

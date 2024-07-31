@@ -7,22 +7,27 @@
     <title>Your Rental Bike</title>
   </head>
   <body>
-    <a href="/users/<%= user._id %>/rental" class="navbar-item">Your Rental</a>
-    <a href="/auth/sign-out" class="navbar-item navbar-item-signout"
-      >Sign Out</a
-    >
-    <main>
-      <h1>Your Rental Bike</h1>
-      <a href="/users/<%= user._id %>/rental/new" class="btn primary-btn"
-        >Rent New Bike</a
-      >
+    <%- include('../partials/nav.ejs') %>
+    <main class="main-content">
+      <header class="hero">
+        <% if(bookings.length === 0){%>
+        <h1>There are no rental bikes</h1>
+        <a href="/users/<%= user._id %>/rental/new" class="btn primary-btn"
+          >You can Rental bike now</a
+        >
+        <% } else{%>
+        <h1>Your Rental Bike</h1>
+        <a href="/users/<%= user._id %>/rental/new" class="btn primary-btn"
+          >Rent New Bike</a
+        ><%}%>
+      </header>
       <ul class="booking-list">
         <% bookings.forEach(booking => { %>
         <li class="booking-item">
           <div class="bike-image">
             <img
-              src="<%= imges[booking.bike[0].company] %>"
-              alt="<%= booking.bike[0].company %> Bike Image"
+              src="<%= imges[booking.bike[0].type] %>"
+              alt="<%= booking.bike[0].type %> Bike Image"
             />
           </div>
           <div class="booking-info">
