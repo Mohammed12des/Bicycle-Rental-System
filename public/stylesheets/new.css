@@ -5,6 +5,8 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  background-image: url("https://static.visitestonia.com/images/3337383/-1_-1_false_false_a9e0f583c0ccfe86b23960740a02594e.jpg");
+  background-size: cover;
 }
 
 main {
