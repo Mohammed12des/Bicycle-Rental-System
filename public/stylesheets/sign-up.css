@@ -12,6 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url("https://wallpapers.com/images/hd/mountain-bike-at-grassy-mountain-uuzljb79t5km4bnh.jpg");
+  background-size: cover;
 }
 
 /* Navigation Styles */

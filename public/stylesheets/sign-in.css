@@ -12,6 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url("https://images8.alphacoders.com/429/429202.jpg");
+  background-size: cover;
 }
 
 /* Navigation Styles */
