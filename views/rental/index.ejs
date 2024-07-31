@@ -7,7 +7,10 @@
     <title>Your Rental Bike</title>
   </head>
   <body>
-    <%- include('../partials/nav.ejs') %>
+    <a href="/users/<%= user._id %>/rental" class="navbar-item">Your Rental</a>
+    <a href="/auth/sign-out" class="navbar-item navbar-item-signout"
+      >Sign Out</a
+    >
     <main>
       <h1>Your Rental Bike</h1>
       <a href="/users/<%= user._id %>/rental/new" class="btn primary-btn"

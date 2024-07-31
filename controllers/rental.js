@@ -8,11 +8,17 @@ router.get("/", async (req, res) => {
     res.render("rental/index.ejs", {
       bookings: currentUser.booking,
       imges: {
-        Track: "https://gearjunkie.com/legacy/images/9531.jpg",
-        Trinx:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSisJllnhY55iy6blLnDC3iMxQ7XCQBkqwNIA&s",
-        klyes:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT366qhoEO_hVdQhYAvU86RMGUwbKf13t-c_Q&s",
+        Road: "https://i.shgcdn.com/14a36e2c-919f-49ba-b43a-6045bc12313a/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+        Mountain:
+          "https://i5.walmartimages.com/seo/Hyper-Bicycle-Men-s-29-Explorer-Mountain-Bike-Hard-Tail-Blue_3e93bdb8-f247-4ae2-898a-e03fe12a5472.c6b499258d504157384035a890ee022e.jpeg",
+        Hybrid:
+          "https://i5.walmartimages.com/seo/Kent-700C-Men-s-Ridgeland-Hybrid-Bike-Blue-Green_5f0cde30-7309-40f1-a582-1373619c26e0.9a532ae2cc296b2c4a9dcb5cb088d28b.jpeg",
+        Touring:
+          "https://i0.wp.com/tomsbiketrip.com/wp-content/uploads/2022/02/ridgeback-panorama-2022-touring-bike.jpg?resize=1534%2C1000&ssl=1",
+        Gravel:
+          "https://www.tradeinn.com/f/14041/140415987/specialized-diverge-sport-700-grx-2024-gravel-bike.jpg",
+        Cruiser:
+          "https://i5.walmartimages.com/seo/Huffy-26-Cranbrook-Men-s-Cruiser-Bike-with-Perfect-Fit-Frame_c72a2b05-1d15-468d-bb03-c071c4e2e3bd_1.e8e890008d15ba4664ba68cb88018431.jpeg",
       },
     });
   } catch (error) {

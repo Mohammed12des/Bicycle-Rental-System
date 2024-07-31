@@ -1,7 +1,7 @@
 /* General Body Styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
 }
@@ -9,11 +9,11 @@ body {
 /* Main Container Styling */
 .booking-details {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 30px auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Header Styling */
@@ -24,13 +24,15 @@ body {
 }
 
 .booking-header h1 {
-  font-size: 24px;
+  font-size: 26px;
   color: #333;
+  margin: 0;
 }
 
 .booking-header h2 {
   font-size: 20px;
   color: #555;
+  margin: 5px 0 0;
 }
 
 /* Booking Info Styling */
@@ -44,7 +46,7 @@ body {
   margin: 10px 0;
 }
 
-/* Button Styling */
+/* Buttons Styling */
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -52,13 +54,14 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .btn-edit {
@@ -79,4 +82,21 @@ body {
 
 .btn-delete:hover {
   background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn:last-child {
+    margin-bottom: 0;
+  }
 }
