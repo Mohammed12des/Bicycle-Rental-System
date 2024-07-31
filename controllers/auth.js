@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const User = require("../models/user.js");
 
 router.get("/sign-up", (req, res) => {
-  res.render("auth/sign-up.ejs");
+  res.render("auth/sign-up.ejs", { error: null });
 });
 
 router.get("/sign-in", (req, res) => {
@@ -25,13 +25,17 @@ router.post("/sign-up", async (req, res) => {
 
     const userInDatabase = await User.findOne({ username: req.body.username });
     if (userInDatabase) {
-      return res.send("Username already taken.");
+      return res.render("/auth/sign-up", {
+        error: "Login failed. Please try again.",
+      });
     }
 
     // Username is not taken already!
     // Check if the password and confirm password match
     if (req.body.password !== req.body.confirmPassword) {
-      return res.send("Password and Confirm Password must match");
+      return res.render("/auth/sign-up", {
+        error: "Password and Confirm Password must match",
+      });
     }
 
     // Must hash the password before sending to the database
@@ -49,6 +53,9 @@ router.post("/sign-up", async (req, res) => {
 
     res.redirect("/auth/sign-in");
   } catch (error) {
+    res.render("auth/sign-up.ejs", {
+      error: "Login failed. Please try again.",
+    });
     console.log(error);
     res.redirect("/");
   }
