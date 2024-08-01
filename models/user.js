@@ -3,7 +3,7 @@ const bikeSchema = mongoose.Schema(
   {
     company: {
       type: String,
-      enum: ["Track", "Trinx", "klyes"],
+      enum: ["Track", "Trinx", "Klyes"],
     },
     type: {
       type: String,
