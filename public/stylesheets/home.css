@@ -8,18 +8,15 @@ p {
   box-sizing: border-box;
 }
 
-/* Ensure body takes up full height */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* background-color: #f4f4f4; */
 }
 
-/* Hero Section */
 header.hero {
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -32,15 +29,15 @@ header.hero {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the whole area */
-  z-index: -1; /* Place video behind the content */
+  object-fit: cover;
+  z-index: -1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1; /* Make sure content is on top of the video */
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-  color: white; /* Text color for contrast */
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   text-align: center;
   padding: 20px;
   border-radius: 8px;
@@ -56,7 +53,6 @@ header.hero {
   font-size: 1.5rem;
 }
 
-/* Button Container */
 .button-container {
   text-align: center;
   margin: 20px 0;
@@ -78,7 +74,6 @@ header.hero {
   background-color: #0056b3;
 }
 
-/* Info Section */
 section.info {
   padding: 40px 20px;
   text-align: center;
@@ -94,7 +89,6 @@ section.info p {
   line-height: 1.6;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.5rem;
