@@ -34,6 +34,10 @@ Welcome to the official GitHub page for the Bicycle Rental System! This project 
 ### [Setup Instructions](https://github.com/Mohammed12des/Bicycle-Rental-System/blob/main/SETUP.MD)
 Learn how to get started with our project by following these detailed setup instructions.
 
+### [Development Status](https://github.com/Mohammed12des/Bicycle-Rental-System/blob/main/development_status.md)
+Development Status of the project
+
+
 ### [Version Control and Bug Tracking](https://github.com/Mohammed12des/Bicycle-Rental-System/blob/main/VERSION_CONTROL.md)
 See how we manage version control and track bugs using GitHub's powerful tools.
 
