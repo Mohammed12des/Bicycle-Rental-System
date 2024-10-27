@@ -38,7 +38,7 @@ Learn how to get started with our project by following these detailed setup inst
 Development Status of the project
 
 
-### [Version Control and Bug Tracking](https://github.com/Mohammed12des/Bicycle-Rental-System/blob/main/VERSION_CONTROL.md)
+### [Version Control and Bug Tracking](https://github.com/Mohammed12des/Bicycle-Rental-System/blob/main/Version_control_Bug_tracker.md)
 See how we manage version control and track bugs using GitHub's powerful tools.
 
 ### [Hosting Information](https://github.com/Mohammed12des/Bicycle-Rental-System/blob/main/HOSTING.md)
