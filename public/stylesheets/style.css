@@ -100,7 +100,107 @@ body {
 .booking-info a:hover {
   background-color: #5a6268;
 }
+/* public/stylesheets/style.css */
+.about-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.about-container h1 {
+  margin-bottom: 20px;
+}
+.about-container p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.about-container a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.about-container a:hover {
+  color: #0056b3;
+}
+/* Main Content */
+.download-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 
+.download-container h1 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.download-container p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+/* List Styling */
+ul,
+ol {
+  margin: 1rem 0 1rem 1.5rem;
+}
+
+ul li,
+ol li {
+  margin-bottom: 0.75rem;
+}
+
+ul ul {
+  margin-top: 0.5rem;
+}
+
+code {
+  background-color: #e8e8e8;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.95rem;
+}
+
+/* Code Block Styling */
+pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+}
 @media (max-width: 768px) {
   .booking-item {
     flex-direction: column;

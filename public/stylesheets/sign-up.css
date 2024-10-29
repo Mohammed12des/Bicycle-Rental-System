@@ -1,4 +1,3 @@
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +15,6 @@ body {
   background-size: cover;
 }
 
-/* Navigation Styles */
 .navbar {
   background: #333;
   color: #fff;
@@ -48,7 +46,6 @@ body {
   border-radius: 4px;
 }
 
-/* Sign Up Container */
 .sign-up-container {
   background: #fff;
   border-radius: 8px;
@@ -59,14 +56,12 @@ body {
   text-align: center;
 }
 
-/* Heading */
 .sign-up-container h1 {
   margin-bottom: 20px;
   font-size: 2rem;
   color: #333;
 }
 
-/* Form Styles */
 .sign-up-form {
   display: flex;
   flex-direction: column;
@@ -101,7 +96,6 @@ body {
   background-color: #0056b3;
 }
 
-/* Error Message */
 .error {
   margin-top: 10px;
   padding: 10px;
@@ -112,7 +106,6 @@ body {
   text-align: left;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
   .sign-up-container {
     width: 90%;
