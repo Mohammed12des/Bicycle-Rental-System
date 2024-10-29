@@ -1,0 +1,50 @@
+/* public/stylesheets/about.css */
+.about-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.about-container h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #333;
+}
+.about-container p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #666;
+}
+.creators {
+  margin-top: 40px;
+}
+.creators h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+.creator-list {
+  list-style: none;
+  padding: 0;
+}
+.creator-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.github-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.creator-item a {
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.creator-item a:hover {
+  color: #0056b3;
+}

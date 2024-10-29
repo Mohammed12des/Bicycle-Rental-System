@@ -1,0 +1,102 @@
+<!-- views/download.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('partials/nav.ejs') %>
+    <main class="download-container">
+      <h1>Download Our App</h1>
+      <p>Download our mobile app to manage your bike rentals on the go!</p>
+      <a
+        href="https://github.com/Mohammed12des/Bicycle-Rental-System/archive/refs/heads/main.zip"
+        class="btn primary-btn"
+        >Download Now</a
+      >
+      <h1>Setup and Installation</h1>
+
+      <h2>Prerequisites</h2>
+      <p>
+        To get started with the <strong>Bicycle Rental System</strong>, you’ll
+        need:
+      </p>
+      <ul>
+        <li>
+          <strong>Node.js</strong> and <strong>npm</strong>:
+          <a href="https://nodejs.org">Download Node.js</a>
+          <ul>
+            <li>
+              This installs <code>npm</code> as well, which you’ll use to manage
+              dependencies.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Step 1: Clone the Repository</h2>
+      <ol>
+        <li><strong>Open your terminal</strong>.</li>
+        <li>
+          <strong>Clone the repo</strong> by running:
+          <pre><code>git clone https://github.com/Mohammed12des/Bicycle-Rental-System.git</code></pre>
+        </li>
+        <li>
+          <strong>Navigate to the project directory</strong>:
+          <pre><code>cd Bicycle-Rental-System</code></pre>
+        </li>
+      </ol>
+
+      <h2>Step 2: Install Dependencies</h2>
+      <ol>
+        <li>
+          <strong>Install backend dependencies</strong>:
+          <pre><code>npm install</code></pre>
+        </li>
+        <li>
+          <strong>Navigate to the <code>client</code> directory</strong> (if
+          there's a React frontend):
+          <pre><code>cd client</code></pre>
+        </li>
+        <li>
+          <strong>Install frontend dependencies</strong>:
+          <pre><code>npm install</code></pre>
+        </li>
+      </ol>
+
+      <h2>Step 3: Running the Project</h2>
+      <ol>
+        <li>
+          <strong>Start the backend</strong>:
+          <ul>
+            <li>
+              Go back to the root directory:
+              <pre><code>cd ..</code></pre>
+            </li>
+            <li>
+              Run the backend server:
+              <pre><code>npm start</code></pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Start the frontend (if applicable)</strong>:
+          <ul>
+            <li>
+              If there's a <code>client</code> directory, start the React app:
+              <pre><code>cd client
+  npm start</code></pre>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <p>That’s it! Now you can start building on the project.</p>
+
+      <hr />
+    </main>
+  </body>
+</html>

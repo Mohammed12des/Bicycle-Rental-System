@@ -1,3 +1,4 @@
+<!-- views/partials/nav.ejs -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,10 +8,12 @@
 <nav class="navbar">
   <div class="navbar-container">
     <div class="navbar-menu">
+      <a href="/about" class="navbar-item">About</a>
       <% if (user) { %>
       <a href="/users/<%= user._id %>/rental" class="navbar-item"
         >Your Rental</a
       >
+      <a href="/download" class="navbar-item">Download</a>
       <a href="/auth/sign-out" class="navbar-item navbar-item-signout"
         >Sign Out</a
       >
