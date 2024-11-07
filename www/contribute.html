@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contribute - RideBook Open Source Bicycle Rental System</title>
+    <style>
+      :root {
+        --primary-color: #00ff00;
+        --secondary-color: #1a1a1a;
+        --text-color: #ffffff;
+        --accent-color: #ff00ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      .page-header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("https://c4.wallpaperflare.com/wallpaper/295/264/47/ktm-bikes-racing-hd-wallpaper-preview.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .contribute-content {
+        padding: 80px 0;
+      }
+
+      .contribute-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .contribute-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+      }
+
+      .contribute-text p {
+        margin-bottom: 20px;
+      }
+
+      .contribute-steps {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      .contribute-steps h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--accent-color);
+      }
+
+      .contribute-steps ol {
+        padding-left: 20px;
+      }
+
+      .contribute-steps li {
+        margin-bottom: 15px;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .community {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .community h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+      }
+
+      .community-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .community-links a {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .community-links a:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+      }
+
+      footer {
+        background-color: #000;
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      @media (max-width: 768px) {
+        .contribute-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .contribute-text h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./features.html">Features</a></li>
+          <li><a href="./contribute.html">Contribute</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="documentation.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+          <li><a href="license.html">License</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h1>Contribute to RideBook</h1>
+      </section>
+
+      <section class="contribute-content">
+        <div class="container">
+          <div class="contribute-grid">
+            <div class="contribute-text">
+              <h2>Join Our Open Source Community</h2>
+              <p>
+                RideBook is an open-source project, and we welcome contributions
+                from developers of all skill levels. Whether you're a seasoned
+                pro or just starting out, there are many ways you can help
+                improve our bicycle rental system.
+              </p>
+              <p>
+                By contributing to RideBook, you'll gain valuable experience in
+                open-source development, collaborate with a global community,
+                and help create a sustainable transportation solution.
+              </p>
+              <a
+                href="https://github.com/Mohammed12des/Bicycle-Rental-System"
+                class="btn"
+                >View on GitHub</a
+              >
+            </div>
+            <div class="contribute-steps">
+              <h3>How to Contribute</h3>
+              <ol>
+                <li>Fork the repository on GitHub</li>
+                <li>Clone your fork to your local machine</li>
+                <li>Create a new branch for your feature or bug fix</li>
+                <li>
+                  Make your changes and commit them with clear, concise commit
+                  messages
+                </li>
+                <li>Push your changes to your fork on GitHub</li>
+                <li>
+                  Open a pull request from your fork to the main RideBook
+                  repository
+                </li>
+                <li>
+                  Respond to any feedback or questions during the review process
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="community">
+        <div class="container">
+          <h2>Join Our Community</h2>
+          <p>
+            Connect with other contributors, get help, and stay updated on the
+            latest developments.
+          </p>
+          <div class="community-links">
+            <a
+              href="https://github.com/Mohammed12des/Bicycle-Rental-System/discussions"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub Discussions</a
+            >
+            <a
+              href="https://discord.gg/UZSeb6gN"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Discord Channel</a
+            >
+            <a
+              href="https://groups.google.com/g/ridebook-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Mailing List</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 RideBook - Bicycle Rental System. Open source project.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

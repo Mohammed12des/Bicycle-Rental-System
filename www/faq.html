@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - RideBook Open Source Bicycle Rental System</title>
+    <style>
+      :root {
+        --primary-color: #00ff00;
+        --secondary-color: #1a1a1a;
+        --text-color: #ffffff;
+        --accent-color: #ff00ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      .page-header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("https://source.unsplash.com/1600x900/?question,answer");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .faq-content {
+        padding: 80px 0;
+      }
+
+      .faq-list {
+        display: grid;
+        gap: 20px;
+      }
+
+      .faq-item {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .faq-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+      }
+
+      .faq-question {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .faq-answer {
+        color: var(--text-color);
+      }
+
+      footer {
+        background-color: #000;
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./features.html">Features</a></li>
+          <li><a href="./contribute.html">Contribute</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="documentation.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+          <li><a href="license.html">License</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h1>Frequently Asked Questions</h1>
+      </section>
+
+      <section class="faq-content">
+        <div class="container">
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question">What is RideBook?</div>
+              <div class="faq-answer">
+                RideBook is an open-source bicycle rental system designed to
+                help businesses manage their bicycle rental operations
+                efficiently. It provides features for inventory management,
+                booking, user management, and more.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">Is RideBook free to use?</div>
+              <div class="faq-answer">
+                Yes, RideBook is free and open-source software released under
+                the GNU General Public License v3.0. You can use, modify, and
+                distribute it freely, as long as you comply with the license
+                terms.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                What technologies does RideBook use?
+              </div>
+              <div class="faq-answer">
+                RideBook is built using HTML, CSS, and JavaScript for the
+                frontend. The backend uses PHP and MySQL. We also use modern
+                development tools and libraries to enhance functionality and
+                user experience.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">How can I contribute to RideBook?</div>
+              <div class="faq-answer">
+                You can contribute to RideBook in many ways, including coding,
+                documentation, bug reporting, and feature suggestions. Visit our
+                "Contribute" page for more information on how to get started.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                Can I use RideBook for my commercial bicycle rental business?
+              </div>
+              <div class="faq-answer">
+                RideBook is designed to be used by both non-profit and
+                commercial bicycle rental operations. You can customize and use
+                it for your business needs while complying with the GPL v3.0
+                license.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                Is there a mobile app for RideBook?
+              </div>
+              <div class="faq-answer">
+                Currently, RideBook is a web-based application that is
+                responsive and works well on mobile devices. A dedicated mobile
+                app is on our roadmap for future development.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">How often is RideBook updated?</div>
+              <div class="faq-answer">
+                As an open-source project, RideBook is continuously improved by
+                our community of contributors. We aim to release major updates
+                quarterly, with bug fixes and minor improvements more
+                frequently.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                Where can I get support for RideBook?
+              </div>
+              <div class="faq-answer">
+                Support for RideBook is provided through our community forums,
+                GitHub issues, and documentation. For more extensive support,
+                you can reach out to our core team or consider hiring a
+                developer familiar with the project.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 RideBook - Bicycle Rental System. Open source project.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

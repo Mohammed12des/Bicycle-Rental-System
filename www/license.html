@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>License - RideBook Open Source Bicycle Rental System</title>
+    <style>
+      :root {
+        --primary-color: #00ff00;
+        --secondary-color: #1a1a1a;
+        --text-color: #ffffff;
+        --accent-color: #ff00ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      .page-header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("https://source.unsplash.com/1600x900/?document,contract");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .license-content {
+        padding: 80px 0;
+      }
+
+      .license-text {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+      }
+
+      .license-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+      }
+
+      .license-text p {
+        margin-bottom: 20px;
+      }
+
+      .license-full {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        border-radius: 10px;
+        white-space: pre-wrap;
+        font-family: monospace;
+        font-size: 0.9rem;
+        overflow-x: auto;
+      }
+
+      footer {
+        background-color: #000;
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .license-text h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./features.html">Features</a></li>
+          <li><a href="./contribute.html">Contribute</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="documentation.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+          <li><a href="license.html">License</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h1>RideBook License</h1>
+      </section>
+
+      <section class="license-content">
+        <div class="container">
+          <div class="license-text">
+            <h2>GNU General Public License v3.0</h2>
+            <p>
+              RideBook is released under the GNU General Public License v3.0.
+              This license ensures that the software remains free and
+              open-source, allowing users to use, modify, and distribute the
+              code.
+            </p>
+            <p>Key points of the GNU GPL v3.0:</p>
+            <ul>
+              <li>You can use, modify, and distribute the software freely.</li>
+              <li>
+                If you distribute modified versions, you must make your
+                modifications available under the same license.
+              </li>
+              <li>
+                You must include a copy of the license and copyright notice with
+                the software.
+              </li>
+              <li>
+                There is no warranty for the program, to the extent permitted by
+                applicable law.
+              </li>
+            </ul>
+          </div>
+          <div class="license-full">
+            <h3>Full License Text</h3>
+            <pre>
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. &lt;https://fsf.org/&gt;
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+Preamble
+
+The GNU General Public License is a free, copyleft license for
+software and other kinds of works.
+
+[... full license text ...]
+
+You should also get your employer (if you work as a programmer) or school,
+if any, to sign a "copyright disclaimer" for the program, if necessary.
+For more information on this, and how to apply and follow the GNU GPL, see
+&lt;https://www.gnu.org/licenses/&gt;.
+
+The GNU General Public License does not permit incorporating your program
+into proprietary programs.  If your program is a subroutine library, you
+may consider it more useful to permit linking proprietary applications with
+the library.  If this is what you want to do, use the GNU Lesser General
+Public License instead of this License.  But first, please read
+&lt;https://www.gnu.org/licenses/why-not-lgpl.html&gt;.
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 RideBook - Bicycle Rental System. Open source project.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
