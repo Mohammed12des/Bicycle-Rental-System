@@ -8,6 +8,7 @@ Selecting a fitting and memorable name for your Bicycle Rental System is essenti
    The team held a brainstorming session to generate keywords associated with our bike rental service, such as bikes, cycle, rental, and ride.
 
 2. **Name Generator Tool:**
+new modification
    We utilized an AI-powered name generator, [Namelix](https://namelix.com), to explore different naming options. Our brainstormed keywords were used to generate potential names.
 
 3. **Top 5 Candidate Names:**
