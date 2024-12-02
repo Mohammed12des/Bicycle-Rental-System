@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - RideBook Open Source Bicycle Rental System</title>
+    <style>
+      :root {
+        --primary-color: #00ff00;
+        --secondary-color: #1a1a1a;
+        --text-color: #ffffff;
+        --accent-color: #ff00ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      .page-header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("https://source.unsplash.com/1600x900/?documentation,code");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .docs-content {
+        padding: 80px 0;
+        display: flex;
+        gap: 40px;
+      }
+
+      .docs-sidebar {
+        width: 1000px;
+        position: sticky;
+        top: 100px;
+        align-self: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .docs-nav {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .docs-nav h3 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+
+      .docs-nav ul {
+        list-style-type: none;
+      }
+
+      .docs-nav ul li {
+        margin-bottom: 10px;
+      }
+
+      .docs-nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .docs-nav ul li a:hover {
+        color: var(--accent-color);
+      }
+
+      .docs-main {
+        flex: 1;
+      }
+
+      .docs-section {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+
+      .docs-section h2 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      .docs-section h3 {
+        color: var(--accent-color);
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .docs-section p {
+        margin-bottom: 15px;
+      }
+
+      .docs-section ul,
+      .docs-section ol {
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      .docs-section code {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+
+      footer {
+        background-color: #000;
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      @media (max-width: 768px) {
+        .docs-content {
+          flex-direction: column;
+        }
+
+        .docs-sidebar {
+          width: 100%;
+          position: static;
+        }
+
+        .page-header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./features.html">Features</a></li>
+          <li><a href="./contribute.html">Contribute</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="documentation.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+          <li><a href="license.html">License</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h1>RideBook Documentation</h1>
+      </section>
+
+      <section class="docs-content">
+        <div class="container">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h3>Contents</h3>
+              <ul>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#configuration">Configuration</a></li>
+                <li><a href="#user-guide">User Guide</a></li>
+                <li><a href="#api-reference">API Reference</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+              </ul>
+            </nav>
+          </aside>
+          <div class="docs-main">
+            <section id="getting-started" class="docs-section">
+              <h2>Getting Started</h2>
+              <p>
+                Welcome to RideBook, the open-source bicycle rental system. This
+                documentation will guide you through the setup, configuration,
+                and usage of RideBook.
+              </p>
+              <h3>System Requirements</h3>
+              <ul>
+                <li>PHP 7.4 or higher</li>
+                <li>MySQL 5.7 or higher</li>
+                <li>Web server (Apache, Nginx, etc.)</li>
+                <li>Composer (PHP package manager)</li>
+                <li>Node.js and npm (for frontend development)</li>
+              </ul>
+            </section>
+            <section id="installation" class="docs-section">
+              <h2>Installation</h2>
+              <ol>
+                <li>
+                  Clone the repository:
+                  <code
+                    >git clone
+                    https://github.com/Mohammed12des/Bicycle-Rental-System.git</code
+                  >
+                </li>
+                <li>
+                  Navigate to the project directory:
+                  <code>cd Bicycle-Rental-System</code>
+                </li>
+                <li>Install PHP dependencies: <code>composer install</code></li>
+                <li>
+                  Install JavaScript dependencies: <code>npm install</code>
+                </li>
+                <li>
+                  Copy the .env.example file to .env and configure your database
+                  settings
+                </li>
+                <li>
+                  Generate an application key:
+                  <code>php artisan key:generate</code>
+                </li>
+                <li>
+                  Run database migrations: <code>php artisan migrate</code>
+                </li>
+                <li>
+                  Seed the database with sample data:
+                  <code>php artisan db:seed</code>
+                </li>
+                <li>
+                  Start the development server: <code>php artisan serve</code>
+                </li>
+              </ol>
+            </section>
+            <section id="configuration" class="docs-section">
+              <h2>Configuration</h2>
+              <p>
+                RideBook can be configured through the .env file and config
+                files in the config directory. Key configuration options
+                include:
+              </p>
+              <ul>
+                <li>Database settings</li>
+                <li>Mail server settings</li>
+                <li>Payment gateway integration</li>
+                <li>Google Maps API key (for location services)</li>
+              </ul>
+              <p>
+                Refer to the comments in the configuration files for detailed
+                explanations of each option.
+              </p>
+            </section>
+            <section id="user-guide" class="docs-section">
+              <h2>User Guide</h2>
+              <h3>Admin Dashboard</h3>
+              <p>
+                The admin dashboard allows you to manage bicycles, users,
+                bookings, and view reports. Key features include:
+              </p>
+              <ul>
+                <li>Adding and managing bicycle inventory</li>
+                <li>User management</li>
+                <li>Booking overview and management</li>
+                <li>Generating reports</li>
+              </ul>
+              <h3>Customer Interface</h3>
+              <p>The customer interface allows users to:</p>
+              <ul>
+                <li>Browse available bicycles</li>
+                <li>Make reservations</li>
+                <li>View and manage their bookings</li>
+                <li>Update their profile</li>
+              </ul>
+            </section>
+            <section id="api-reference" class="docs-section">
+              <h2>API Reference</h2>
+              <p>
+                RideBook provides a RESTful API for integration with other
+                systems. Key endpoints include:
+              </p>
+              <ul>
+                <li><code>GET /api/bicycles</code>: List all bicycles</li>
+                <li><code>POST /api/bookings</code>: Create a new booking</li>
+                <li><code>GET /api/users/{id}</code>: Get user details</li>
+              </ul>
+              <p>
+                For a complete API reference, please refer to our API
+                documentation.
+              </p>
+            </section>
+            <section id="troubleshooting" class="docs-section">
+              <h2>Troubleshooting</h2>
+              <p>
+                If you encounter issues while using RideBook, try the following
+                steps:
+              </p>
+              <ol>
+                <li>
+                  Check the error logs in <code>storage/logs/laravel.log</code>
+                </li>
+                <li>Ensure all dependencies are installed and up to date</li>
+                <li>Verify your configuration settings in the .env file</li>
+                <li>
+                  Clear application cache: <code>php artisan cache:clear</code>
+                </li>
+              </ol>
+              <p>
+                If you still need assistance, please open an issue on our GitHub
+                repository or reach out to our community support channels.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 RideBook - Bicycle Rental System. Open source project.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

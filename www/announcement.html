@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announcement - RideBook Open Source Bicycle Rental System</title>
+    <style>
+      :root {
+        --primary-color: #00ff00;
+        --secondary-color: #1a1a1a;
+        --text-color: #ffffff;
+        --accent-color: #ff00ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      .page-header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("https://source.unsplash.com/1600x900/?announcement,news");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .announcement-content {
+        padding: 80px 0;
+      }
+
+      .announcement-section {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+
+      .announcement-section h2 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      .announcement-section p {
+        margin-bottom: 15px;
+      }
+
+      .announcement-meta {
+        font-style: italic;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+      }
+
+      .cta-button:hover {
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      footer {
+        background-color: #000;
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#features">Features</a></li>
+          <li><a href="./contribute.html">Contribute</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="documentation.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+          <li><a href="license.html">License</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h1>RideBook Announcements</h1>
+      </section>
+
+      <section class="announcement-content">
+        <div class="container">
+          <div class="announcement-section">
+            <h2>RideBook v2.0 Release</h2>
+            <div class="announcement-meta">
+              Posted on November 7, 2024 by RideBook Team
+            </div>
+            <p>
+              We are thrilled to announce the release of RideBook v2.0! This
+              major update brings a host of new features and improvements to our
+              open-source bicycle rental system.
+            </p>
+            <p>Key highlights of this release include:</p>
+            <ul>
+              <li>Improved user interface with a modern, responsive design</li>
+              <li>
+                Advanced booking system with real-time availability updates
+              </li>
+              <li>
+                Integration with popular payment gateways for seamless
+                transactions
+              </li>
+              <li>
+                Enhanced reporting and analytics dashboard for business insights
+              </li>
+              <li>Mobile app for both iOS and Android platforms</li>
+            </ul>
+            <p>
+              We'd like to thank our amazing community of contributors who have
+              made this release possible. Your dedication and hard work have
+              truly elevated RideBook to new heights.
+            </p>
+            <a href="download.html" class="cta-button">Download v2.0 Now</a>
+          </div>
+
+          <div class="announcement-section">
+            <h2>Upcoming Community Meetup</h2>
+            <div class="announcement-meta">
+              Posted on November 1, 2024 by RideBook Community Manager
+            </div>
+            <p>
+              Mark your calendars! We're excited to announce our upcoming
+              virtual community meetup on November 15, 2024. This is a great
+              opportunity to connect with fellow RideBook users, contributors,
+              and the core development team.
+            </p>
+            <p>During the meetup, we'll be discussing:</p>
+            <ul>
+              <li>Highlights of the v2.0 release</li>
+              <li>Roadmap for future developments</li>
+              <li>Community showcase of RideBook implementations</li>
+              <li>Q&A session with the core team</li>
+            </ul>
+            <p>
+              Don't miss this chance to be part of shaping the future of
+              RideBook!
+            </p>
+            <a href="#" class="cta-button">Register for Meetup</a>
+          </div>
+
+          <div class="announcement-section">
+            <h2>Call for Contributors</h2>
+            <div class="announcement-meta">
+              Posted on October 20, 2024 by RideBook Lead Developer
+            </div>
+            <p>
+              As we continue to grow and improve RideBook, we're always on the
+              lookout for passionate contributors to join our community. Whether
+              you're a developer, designer, documentation writer, or tester,
+              there's a place for you in the RideBook project.
+            </p>
+            <p>
+              We have several exciting initiatives in the pipeline, including:
+            </p>
+            <ul>
+              <li>
+                Implementing a machine learning-based demand prediction system
+              </li>
+              <li>Enhancing our API for better third-party integrations</li>
+              <li>Improving accessibility features across the platform</li>
+              <li>Expanding our documentation and creating video tutorials</li>
+            </ul>
+            <p>
+              If you're interested in contributing or have ideas for
+              improvements, we'd love to hear from you!
+            </p>
+            <a href="contribute.html" class="cta-button"
+              >Learn How to Contribute</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 RideBook - Bicycle Rental System. Open source project.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

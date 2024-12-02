@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download RideBook - Open Source Bicycle Rental System</title>
+    <style>
+      :root {
+        --primary-color: #00ff00;
+        --secondary-color: #1a1a1a;
+        --text-color: #ffffff;
+        --accent-color: #ff00ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      .page-header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("https://source.unsplash.com/1600x900/?bicycle,download");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .download-content {
+        padding: 80px 0;
+      }
+
+      .download-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .download-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+      }
+
+      .download-text p {
+        margin-bottom: 20px;
+      }
+
+      .download-options {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      .download-options h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--accent-color);
+      }
+
+      .download-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+      }
+
+      .download-button:hover {
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .system-requirements {
+        margin-top: 40px;
+      }
+
+      .system-requirements h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--accent-color);
+      }
+
+      .system-requirements ul {
+        list-style-type: none;
+      }
+
+      .system-requirements li {
+        margin-bottom: 10px;
+      }
+
+      footer {
+        background-color: #000;
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      @media (max-width: 768px) {
+        .download-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .download-text h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./features.html">Features</a></li>
+          <li><a href="./contribute.html">Contribute</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="documentation.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+          <li><a href="license.html">License</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h1>Download RideBook</h1>
+      </section>
+
+      <section class="download-content">
+        <div class="container">
+          <div class="download-grid">
+            <div class="download-text">
+              <h2>Get Started with RideBook</h2>
+              <p>
+                RideBook is an open-source bicycle rental system that's easy to
+                set up and customize. Download the latest version and start
+                revolutionizing your bicycle rental business today!
+              </p>
+              <p>
+                Choose the download option that best suits your needs. If you're
+                not sure which one to pick, go for the recommended version.
+              </p>
+            </div>
+            <div class="download-options">
+              <h3>Download Options</h3>
+              <a
+                href="https://github.com/Mohammed12des/Bicycle-Rental-System/archive/refs/heads/main.zip"
+                class="download-button"
+                >Download Latest Release (ZIP)</a
+              >
+              <a
+                href="https://github.com/Mohammed12des/Bicycle-Rental-System.git"
+                class="download-button"
+                >Clone Repository (Git)</a
+              >
+            </div>
+          </div>
+          <div class="system-requirements">
+            <h3>System Requirements</h3>
+            <ul>
+              <li>Web server (Apache, Nginx, etc.)</li>
+              <li>PHP 7.4 or higher</li>
+              <li>MySQL 5.7 or higher</li>
+              <li>Composer (PHP package manager)</li>
+              <li>Node.js and npm (for frontend development)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 RideBook - Bicycle Rental System. Open source project.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
